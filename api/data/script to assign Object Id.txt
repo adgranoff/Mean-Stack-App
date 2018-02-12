@@ -1,0 +1,26 @@
+// used since import data into Mongo via Json file
+
+db.hotels.update(
+    {},
+    {
+        $set : {
+            "reviews.0._id" : ObjectId()
+        }
+    },
+    {
+     multi : true   
+    }
+)
+
+// one hotel had two reviews
+
+db.hotels.update(
+    {
+        "name" : "Grand Hotel Palatino"
+    },
+    {
+        $set : {
+            "reviews.1._id" : ObjectId()
+        }
+    }
+)
