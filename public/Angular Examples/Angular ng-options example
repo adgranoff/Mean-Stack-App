@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style>
+  .red {
+    color: red;
+  }
+  .green {
+    color:green;
+  }
+  </head>
+<body>
+  <div ng-init="rebels = [
+  {name: 'Luke', profession: 'Jedi'},
+  {name: 'Hans', profession: 'Smuggler'},
+  {name: 'Adam', profession: 'Smuggler'},
+  {name: 'Chewy', profession: 'Pilot'}];">
+  
+  <select name="" id="" ng-model="rebelinfo" ng-options="rebel.name group by rebel.profession for rebel in rebels"></select>
+  <p>You have selected: {{rebelinfo.name}} who is a {{rebelinfo.profession}}</p>
+  
+</body>
+</html>
