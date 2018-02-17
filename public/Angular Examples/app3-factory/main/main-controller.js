@@ -9,4 +9,9 @@ function MainController(HotelFactory) {
     });
 
     vm.name = 'Adam';
+
+    vm.date1 = '12 Feburary 2016';
+    vm.date2 = '11 March 2016';
+    vm.date3 = '07 January 2015';
+    vm.date4 = '25 April 2014';
 }
