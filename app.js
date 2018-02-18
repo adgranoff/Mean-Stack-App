@@ -15,7 +15,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-//set status direcotry before define routes
+//set static directory before define routes
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
