@@ -21,6 +21,7 @@ app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
 //enable parsing of posted forms
 app.use(bodyParser.urlencoded({ extended : false }));
+app.use(bodyParser.json());
 
 //add routing
 app.use('/api', routes);
